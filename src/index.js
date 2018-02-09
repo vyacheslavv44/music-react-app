@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-//import registerServiceWorker from './registerServiceWorker';
+import redux from 'react-redux';//tried here 'redux'
+//import registerServiceWorker from './registerServiceWorker';//just don't know what this for
 
 import { Router, Route, Link, browserHistory } from 'react-router-3';
 import Routes from './routes';
@@ -31,15 +32,14 @@ const addTrackBtn = document.querySelectorAll('.addTrack')[0];
 const trackInput = document.querySelectorAll('.trackInput')[0];
 const list = document.querySelectorAll('.list')[0];
 
-
+//console.log(addTrackBtn);
 
 store.subscribe(() => {
     //console.log('subscribe', store.getState());
-    
-    // 33 line - without it in our list adding (not one at a time) but
+    // without it in our list adding (not one at a time) but
     // all items in array with every button's hit.
     list.innerHTML = '';
-    // 35 line - clearing input text field
+    //clearing input text field
     trackInput.value = '';
     store.getState().forEach(track => {
         const li = document.createElement('li');
@@ -53,7 +53,7 @@ store.subscribe(() => {
 
 addTrackBtn.addEventListener('click', () => {
     const trackName = trackInput.value;
-    // 50 check for trackName NOT empty
+    //check for trackName NOT empty
     if (!trackName) {
         return
       }
@@ -62,7 +62,7 @@ addTrackBtn.addEventListener('click', () => {
 
 
 
-
+  
 
 
 //registerServiceWorker();
