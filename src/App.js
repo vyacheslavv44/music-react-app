@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Link } from 'react-router-3';
+import { Router, Route, Link, browserHistory } from 'react-router-3';
 import Tracks from './pages/Tracks/Tracks';
 import Request from './pages/Request/Request';
+import Routes from './routes';
 
 class App extends Component {
   render() {
@@ -13,13 +14,14 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
+        <div className="App-intro">
+          
           <p><Link to="/">Главная</Link></p>
           <p><Link to="/tracks">Песни</Link></p>
           <p><Link to="/request">Пользователи</Link></p>
 
           {this.props.children}
-        </p>
+        </div>
       </div>
     );
   }

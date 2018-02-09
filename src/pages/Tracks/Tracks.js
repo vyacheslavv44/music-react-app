@@ -27,14 +27,7 @@ class Tracks extends Component {
   }
 }
 
-addTrackBtn.addEventListener('click', () => {
-  const trackName = trackInput.value;
-  // 50 check for trackName NOT empty
-  if (!trackName) {
-      return
-    }
-  store.dispatch({ type: 'ADD_TRACK', payload: trackName});
-});
+
 
 
 export default Tracks;
