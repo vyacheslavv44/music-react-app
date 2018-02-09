@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Router, Route, Link, browserHistory } from 'react-router-3';
+import { Link } from 'react-router-3';
 import Tracks from './pages/Tracks/Tracks';
 import Request from './pages/Request/Request';
 
@@ -14,7 +14,6 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          
           <p><Link to="/">Главная</Link></p>
           <p><Link to="/tracks">Песни</Link></p>
           <p><Link to="/request">Пользователи</Link></p>
