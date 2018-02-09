@@ -2,13 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Tracks from './pages/Tracks/Tracks';
 //import registerServiceWorker from './registerServiceWorker';
 
 import { Router, Route, Link, browserHistory } from 'react-router-3';
 import Routes from './routes';
 import { createStore } from 'redux';
 
+ReactDOM.render(
+    <Routes history={browserHistory} />,
+    document.getElementById('root')
+);
 
 
 function playlist(state = [], action) {
@@ -23,15 +26,11 @@ function playlist(state = [], action) {
 
 
 const store = createStore(playlist);
-//querySelector()
+
 const addTrackBtn = document.querySelectorAll('.addTrack')[0];
 const trackInput = document.querySelectorAll('.trackInput')[0];
 const list = document.querySelectorAll('.list')[0];
 
-
-// const addTrackBtn = document.querySelector('.addTrack');
-// const trackInput = document.querySelector('.trackInput');
-// const list = document.querySelector('.list');
 
 
 store.subscribe(() => {
@@ -68,7 +67,3 @@ addTrackBtn.addEventListener('click', () => {
 
 //registerServiceWorker();
 
-ReactDOM.render(
-    <Routes history={browserHistory} />,
-    document.getElementById('root')
-);
