@@ -43,7 +43,8 @@ class Tracks extends Component {
       <div className="Tracks">
         <h1>Песни</h1>
 
-        <input type="text" placeholder="введите трэк" required className="trackInput" value={this.state.trackName} />
+        
+        <input type="text" placeholder="введите трэк" required className="trackInput" value={this.state.trackName} onChange={this.onNameChange} />
         <button className="addTrack" onClick={this.addTrack}>Добавить</button>
         <ul class="list">
           {this.props.tracks.map(this.renderTrack, this)}
