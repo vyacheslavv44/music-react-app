@@ -13,19 +13,20 @@ class App extends Component {
   render() {
     return (
       <Provider store={this.store}>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to React</h1>
-          </header>
-          <div className="App-intro">
+                <div className="App">
+                   <header className="App-header">
+                        <img src={logo} className="App-logo" alt="logo" />
+                        <h1 className="App-title">Welcome to React</h1>
+                      </header>
+                    <div className="App-intro">
             
             <p><Link to="/">Главная</Link></p>
-            <p><Link to="/tracks">Песни</Link></p>
-            <p><Link to="/request">Пользователи</Link></p>
+                        <p><Link to="/tracks">Песни</Link></p>
+                        <p><Link to="/request">Пользователи</Link></p>
+         
 
             {this.props.children}
-          </div>
+           </div>
         </div>
       </Provider>
     );
