@@ -30,7 +30,7 @@ class Tracks extends Component {
         this.props.addTrack(trackName);
   }
 
-    renderTrack = trackName => <li>{trackName}<li>
+    renderTrack = trackName => <li>{trackName}</li>
  
     
   render() {
