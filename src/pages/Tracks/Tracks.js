@@ -45,6 +45,7 @@ class Tracks extends Component {
       
         <input type="text" placeholder="введите трэк" required className="trackInput" value={this.state.trackName} onChange={this.onNameChange} />
 
+
         <button className="addTrack" onClick={this.addTrack}>Добавить</button>
         <ul class="list">
           {this.props.tracks.map(this.renderTrack, this)}
