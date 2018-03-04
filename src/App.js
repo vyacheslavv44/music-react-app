@@ -9,6 +9,7 @@ import createStore from './store/create';
 
 class App extends Component {
   store = createStore();
+
   render() {
     return (
       <Provider store={this.store}>

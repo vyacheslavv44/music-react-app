@@ -1,5 +1,4 @@
 import playlist from './playlist';
 
-export {
-  playlist
-    };
+export {playlist};
+
